@@ -40,20 +40,20 @@ services:
 
         myapp:
           restart: unless-stopped
+
           image: ecomod/effortsinvest:latest
           container_name: myappcontainer
           volumes:
             - "./rstudio_home:/home/cloud"
             #- "./dockercontext/EFForTS-ABM:/home/cloud/EFForTS-ABM"
-            - "./dockercontext/netlogofolder:/home/cloud/netlogofolder"  
+            #- "./dockercontext/netlogofolder:/home/cloud/netlogofolder"  
           expose:
             - "8787"
-          environment:
-            - VIRTUAL_HOST=c108-140.cloud.gwdg.de
+         environment:
+            - VIRTUAL_HOST=<server url>
             - VIRTUAL_NETWORK=nginx-proxy
             - VIRTUAL_PORT=80
-            - USER=cloud
-            - PASSWORD=UmT2kswp
-            - LETSENCRYPT_HOST=c108-140.cloud.gwdg.de
-            - LETSENCRYPT_EMAIL=shanss@gwdg.de
- 
+            - USER=<server benutzername>
+            - PASSWORD=<server passwort>
+            - LETSENCRYPT_HOST=<nochmal server url>
+            - LETSENCRYPT_EMAIL=<beliebige gültige emailadress>

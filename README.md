@@ -13,7 +13,8 @@ sudo apt update && sudo apt -y dist-upgrade # might be blocked due to auto updat
 ```
 
 ## Install docker:
- 
+
+
 ```
 sudo apt -y install curl gnupg2 apt-transport-https ca-certificates  software-properties-common
 
@@ -24,7 +25,8 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt update
 sudo apt -y install docker-ce
 ```
- 
+
+
 ## Install docker-compose
 
 Have a look at https://github.com/docker/compose/releases and see which is the most recent release. At the time of this writing, it is version  `1.27.4`
@@ -61,6 +63,24 @@ If you use a different tag than `sebastianhanss/rstudio:latest` remember to adju
 	* If you want to mount any directories into your RStudio container you need to change the `VOLUMES TO BE MOUNTED` line.
 	* Run `sudo docker-compose up -d` to start the containers
 
-You should now have a working RStudio server that you can access via a web browser at *`c10x-xxx.cloud.gwdg.de`*.
+You should now have a working RStudio server that you can access via a web browser at *`https://c10x-xxx.cloud.gwdg.de`*.
 
 More explanations at https://github.com/PawseySC/rstudio-nginx
+
+
+# Installing Efforts and Netlogo
+
+Via Konsole in R: 
+Clone EFForTS-ABM with
+```
+git clone https://github.com/EFForTS-B10/EFForTS-ABM.git
+```
+download netlogo
+
+```
+wget http://ccl.northwestern.edu/netlogo/6.1.1/NetLogo-6.1.1-64.tgz
+```
+and unzip it
+```
+tar -xzf NetLogo-6.1.1-64.tgz
+```
