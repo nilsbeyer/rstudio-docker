@@ -40,7 +40,7 @@ services:
 
         myapp:
           restart: unless-stopped
-          image: pythoninvest:latest
+          image: ecomod/effortsinvest:latest
           container_name: myappcontainer
           volumes:
             - "./rstudio_home:/home/cloud"
