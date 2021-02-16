@@ -80,7 +80,7 @@ download netlogo
 ```
 wget http://ccl.northwestern.edu/netlogo/6.1.1/NetLogo-6.1.1-64.tgz
 ```
-and unzip it
+and unzip it (slightly more complicated command makes sure the created directory is called 'netlogofolder' for later reference in nlrx)
 ```
-tar -xzf NetLogo-6.1.1-64.tgz
+mkdir netlogofolder && tar xf NetLogo-6.1.1-64.tgz -C netlogofolder --strip-components 1
 ```
